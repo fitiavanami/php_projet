@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inscription Étudiants</title>
+  <link rel="stylesheet" href="etudiants.css">
+</head>
+<body>
+
+  <header>
+    <h1>Inscription des Étudiants</h1>
+  </header>
+
+  <main>
+    <form id="formEtudiant" action="traitement.php" method="POST" novalidate>
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required />
+
+      <label for="prenoms">Prénoms</label>
+      <input type="text" id="prenoms" name="prenoms" placeholder="Entrez vos prénoms" required />
+
+      <label for="matricule">Matricule</label>
+      <input type="text" id="matricule" name="matricule" placeholder="Entrez votre matricule" required />
+
+      <label for="class">Classe</label>
+      <input type="text" id="class" name="class" placeholder="Entrez votre classe" required />
+
+      <label for="adress">Adresse</label>
+      <input type="text" id="adress" name="adress" placeholder="Entrez votre adresse" required />
+
+      <div class="btn-group">
+        <input type="submit" value="S'inscrire" />
+        <button type="button" class="return-btn"><a href="index.html">Retour</a></button>
+      </div>
+
+      <div id="message"></div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025. Tous droits réservés. Notre école est fondée en 2008.</p>
+  </footer>
+
+  <script>
+    document.getElementById('formEtudiant').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+
+      fetch('traitement.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        const message = document.getElementById('message');
+        message.innerHTML = data;
+        if(data.toLowerCase().includes('erreur')){
+          message.style.color = '#ff6b6b'; // rouge clair si erreur
+        } else {
+          message.style.color = '#4caf50'; // vert clair si succès
+          this.reset();
+        }
+      })
+      .catch(() => {
+        const message = document.getElementById('message');
+        message.innerHTML = "⛔ Erreur lors de l'envoi.";
+        message.style.color = '#ff6b6b';
+      });
+    });
+  </script>
+
+</body>
+</html>
