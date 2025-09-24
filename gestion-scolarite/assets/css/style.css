@@ -1,0 +1,361 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #b1c4d7 0%, #d1b3e0 100%);
+  min-height: 100vh;
+  color: #2d2d34;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ------------------- NAVBAR ------------------- */
+.navbar {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(177, 196, 215, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 70px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #7b9acc;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 16px; /* réduit l'espacement entre les éléments */
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #2d2d34;
+  font-weight: 500;
+  padding: 8px 12px; /* réduit le padding */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background: #b1c4d7;
+  color: #fff;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  box-shadow: 0 5px 25px rgba(177, 196, 215, 0.08);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.nav-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 12px 20px;
+  color: #2d2d34;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: #e3eaf6;
+}
+
+/* ------------------- CARD ------------------- */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(177, 196, 215, 0.08);
+  padding: 30px;
+  margin: 20px 0;
+}
+
+.card-header {
+  border-bottom: 2px solid #e3eaf6;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.card-title {
+  font-size: 28px;
+  color: #2d2d34;
+  margin-bottom: 10px;
+}
+
+/* ------------------- BUTTONS ------------------- */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #b1c4d7 0%, #d1b3e0 100%);
+  color: #2d2d34;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #a1b4c7 0%, #c1a3d0 100%);
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: #4caf50;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background: #43a047;
+}
+
+.btn-warning {
+  background: #ffb300;
+  color: #fff;
+}
+
+.btn-warning:hover {
+  background: #ffa000;
+}
+
+.btn-danger {
+  background: #e53935;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #d32f2f;
+}
+
+/* ------------------- FORMS ------------------- */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #7b9acc;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e3eaf6;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #d1b3e0;
+}
+
+/* ------------------- TABLE ------------------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e3eaf6;
+}
+
+.table th {
+  background: #e3eaf6;
+  font-weight: 600;
+  color: #7b9acc;
+}
+
+.table tr:hover {
+  background: #f6f8fa;
+}
+
+/* ------------------- SEARCH ------------------- */
+.search-container {
+  margin-bottom: 30px;
+}
+
+.search-box {
+  position: relative;
+  max-width: 400px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  border: 2px solid #e3eaf6;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.search-box::after {
+  content: "🔍";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ------------------- LOGIN ------------------- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(177, 196, 215, 0.08);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-title {
+  font-size: 32px;
+  color: #2d2d34;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: #7b9acc;
+  font-size: 16px;
+}
+
+/* ------------------- ALERT ------------------- */
+.alert {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.alert-success {
+  background: #e6fff4;
+  color: #2e7d32;
+  border: 1px solid #81c784;
+}
+
+.alert-error {
+  background: #fff0f3;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.alert-info {
+  background: #e3eaf6;
+  color: #1565c0;
+  border: 1px solid #90caf9;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #2d2d34;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .card-title {
+    font-size: 22px;
+  }
+
+  .table {
+    font-size: 13px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(177, 196, 215, 0.08);
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
