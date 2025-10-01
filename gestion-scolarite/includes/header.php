@@ -14,7 +14,9 @@ requireLogin();
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.php" class="logo">Gestion de Scolarité</a>
+            <a href="index.php" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="image/logo.png" alt="Logo Gestion Scolarité" style="height: 60px; width: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); transition: transform 0.2s;">
+            </a>
             
             <ul class="nav-menu">
                 <li class="nav-item">

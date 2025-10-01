@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +18,6 @@ body {
   padding: 20px;
 }
 
-/* ------------------- NAVBAR ------------------- */
 .navbar {
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(10px);
@@ -49,7 +47,7 @@ body {
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 16px; /* réduit l'espacement entre les éléments */
+  gap: 16px;
 }
 
 .nav-item {
@@ -60,7 +58,7 @@ body {
   text-decoration: none;
   color: #2d2d34;
   font-weight: 500;
-  padding: 8px 12px; /* réduit le padding */
+  padding: 8px 12px;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
@@ -70,7 +68,7 @@ body {
   color: #fff;
 }
 
-/* Dropdown */
+
 .dropdown {
   position: absolute;
   top: 100%;
@@ -103,8 +101,7 @@ body {
 .dropdown-item:hover {
   background: #e3eaf6;
 }
-
-/* ------------------- CARD ------------------- */
+ 
 .card {
   background: #fff;
   border-radius: 15px;
@@ -125,7 +122,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* ------------------- BUTTONS ------------------- */
 .btn {
   padding: 12px 24px;
   border: none;
@@ -175,7 +171,6 @@ body {
   background: #d32f2f;
 }
 
-/* ------------------- FORMS ------------------- */
 .form-group {
   margin-bottom: 20px;
 }
@@ -201,7 +196,6 @@ body {
   border-color: #d1b3e0;
 }
 
-/* ------------------- TABLE ------------------- */
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -226,7 +220,6 @@ body {
   background: #f6f8fa;
 }
 
-/* ------------------- SEARCH ------------------- */
 .search-container {
   margin-bottom: 30px;
 }
@@ -252,7 +245,6 @@ body {
   transform: translateY(-50%);
 }
 
-/* ------------------- LOGIN ------------------- */
 .login-container {
   display: flex;
   justify-content: center;
@@ -286,7 +278,6 @@ body {
   font-size: 16px;
 }
 
-/* ------------------- ALERT ------------------- */
 .alert {
   padding: 15px 20px;
   border-radius: 8px;
@@ -311,7 +302,6 @@ body {
   border: 1px solid #90caf9;
 }
 
-/* ------------------- RESPONSIVE ------------------- */
 .menu-toggle {
   display: none;
   font-size: 26px;
@@ -330,7 +320,6 @@ body {
   }
 }
 
-/* Mobiles */
 @media (max-width: 768px) {
   .nav-menu {
     flex-direction: column;
