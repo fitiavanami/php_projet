@@ -5,3 +5,6 @@ Diary
 -db_name:gestion (localhost:phpmyadmin)
 -puis importer le db dans le dossier db
 
+Pour connecter au site saisie
+pseudo:admin
+mdp:admin
